@@ -53,9 +53,29 @@ body{
     padding: 10px 20px;
     background-color: rgb(255, 128, 0);
     border: none;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;}
+
+.nosotros{
+    padding: 3.12rem;
+    text-align: center;
+    background-color: #f5f5dc;
+    color: #333;
+    }
+
+    .nosotros h2{
+        font-size: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .nosotros p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
 
 .featured-products{ /*inicio de los producros - Caja Grande*/
     padding: 3.12rem;
