@@ -30,7 +30,7 @@ body{
     background-position: 100% 50rem;
     text-align: cover;
     color: #FFD700;
-    padding: 6.25rem 0;
+    padding: 20rem 0;
 
     background-color: #f5f5dc;
 }
@@ -142,4 +142,35 @@ body{
     color:antiquewhite;
     background-color: rgb(255, 128, 0);}
 
+.social-media{
+    margin-bottom: 1.25rem;}
 
+.social-media a{
+    color: brown;
+    margin: 0 .625rem;
+    font-size: 1.5rem;}
+
+.newsletter{
+    text-align: center;
+    margin-bottom: 1.25rem;}
+
+.newsletter h3{
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"]{
+    padding: .5rem;
+    border: 2px solid orange;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.newsletter button[type="submit"]{
+    background-color: green;
+    color: white;
+    padding: 18px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
