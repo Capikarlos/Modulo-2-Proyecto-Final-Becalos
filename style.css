@@ -33,19 +33,31 @@ body{
     font-family: 'Roboto Condensed', sans-serif;/*Pone todo a Roboto Condensed*/
     font-style: normal;
 }
+/*Inicio del Nav-bar*/
+@keyframes ocultar{
+    to{
+        background-color: rgb(255, 128, 0, .4);
+        backdrop-filter: blur(100%);
+        font-size: 16px;
+        padding: .7rem;
+    }
+}
 header{
     position: sticky;
     top: 0;
-    z-index: 1000; /*Para que siempre este enfrente*/
+    z-index: 1; /*Para que siempre este enfrente*/
 }
 .navbar{
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem;
     background-color: rgb(255, 128, 0);
-    }
-
+    animation: ocultar linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 500px;
+}
 .nav-links{
     list-style: none;
     display: flex;
@@ -55,29 +67,33 @@ header{
     width: max-content; /*es para que no se baje los elementos de 2 palabras*/
     padding: 8px 12px; /*para que se vea vien el hover*/
     border-radius: 3px;
-    transition: all 0.5s ease; 
+    transition: 1.5s ease; 
 }
 .nav-links a{ /*estu */
     text-decoration: none;
     color: black;
     font-weight: bold;
+    transition: 0.3s ease; 
 }
 .nav-links li:hover{
     background-color: #cc5d02;
 }
-
+.nav-links li:hover a{
+    color: #f5f5dc;
+}
 .logo{/*Logo modificaciones y marca inventada*/
     font-size: 25px;
     font-weight: bold;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
 .logo img{
     width: 100%;
     height: 40px;
 }
 
+/*Inicio del HERO*/
 .hero{
     background-image: url(https://teacultureoftheworld.com/cdn/shop/articles/taiwan-milk-tea-with-boba-bubble-pearl-on-plastic-2024-02-05-02-27-11-utc_2191x.jpg?v=1714023533);
     background-size: cover;
@@ -85,38 +101,38 @@ header{
     text-align: cover;
     color: #FFD700;
     padding: 9rem 0;
-    background-color: #f5f5dc;}
-
+    background-color: #f5f5dc;
+}
 .hero-content{
-    text-shadow: 2px 2px 4px #333;
+    text-shadow: 2px 2px 4px black, 1px 1px 0px black, 2px 1px 1px orange;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .hero-content h2{
     font-size: 3rem;
-    margin-bottom: 1.25rem;}
-
+    margin-bottom: 1.25rem;
+}
 .hero-content p{
-    font-size: 1.2rem;
-    margin-bottom: 20px;}
-
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
 .hero-content button, .featured-products button{
     padding: .625rem 1.25rem;
     background-color: rgb(255, 128, 0);
     border: thick double black;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;}
-
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
 .hero-content button:hover{
     color: #cc5d02;
     background-color: #FFD700;
     box-shadow: 0 0 40px 20px orange;
-    transition: 0.5s ease;
 }
 
+/*Inicio del NOSOTROS(que es la empresa)*/
 .nosotros{
     padding: 3.12rem;
     text-align: center;
@@ -134,32 +150,38 @@ header{
     margin: 0 auto;
 }
 
+/*Inicio del Productos (bebidas con flex)*/
+
 .featured-products{ /*inicio de los producros - Caja Grande*/
     padding: 3.12rem;
     text-align: center;
 }
-
 .product-list{ /*inicio de los producros - Caja mediana*/
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px;
 }
-
-.product{
+.product{/*inicio de los producros - Caja pequeña*/
     background-color: #ffe5a5;
     width: 18.75rem;
     margin-bottom: 1.87rem;
     border-radius: 50%;
+    transition: 0.8s ease-in-out;
 }
-
-.product:hover{
-    background-color: rgb(253, 255, 195);}
 .product img{
     filter: drop-shadow(0 0 7px black); /*Esto agrega uuna sombra a las imagenes png*/
     height: 25rem;
     object-fit: cover;
-    margin-bottom: .625rem;}
+    margin-bottom: .625rem;
+    transition: 1s ease-out;}
+.product:hover{
+    background-color: rgb(253, 255, 195);
+}
+.product:hover img{
+    transform: scale(1.1) rotate(10deg);
+    filter: drop-shadow(0 0 15px #461d04);
+}
 
 .postre{
     padding: 50px;
