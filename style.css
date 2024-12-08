@@ -1,7 +1,8 @@
 /*Notas: ulize la extension px to rem para convertir mas rapido los px(ctrl+z)*/
 *{
     padding: 0;
-    margin: 0;}
+    margin: 0;
+    box-sizing: border-box}
 
 /*personalización del scrollbar info: https://www.youtube.com/watch?v=lvKK2fs6h4I&ab_channel=KevinPowell*/
 ::-webkit-scrollbar {
@@ -24,11 +25,14 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;}
+
 body{
     background-color: #fffaec; /*para decidir el color https://uicolors.app/create*/
-    font-family: 'Roboto Condensed', sans-serif;}/*Pone todo a Roboto*/
+    font-family: 'Roboto Condensed', sans-serif;/*Pone todo a Roboto Condensed*/
+    font-style: normal;}
 
 .navbar{
+    z-index: 1000;
     position: sticky;
     top: 0;
     display: flex;
@@ -44,13 +48,14 @@ body{
     margin-left: 1.5rem;
     width: max-content; /*es para que no se baje los elementos de 2 palabras*/
     padding: 8px 12px; /*para que se vea vien el hover*/
-}
+    border-radius: 3px;}
 .nav-links a{ /*estu */
     text-decoration: none;
     color: black;
     font-weight: bold;}
 .nav-links li:hover{
     background-color: #cc5d02;
+    transition: 0.5s;
 }
 .logo{/*Logo modificaciones y marca inventada*/
     font-size: 25px;
@@ -90,6 +95,12 @@ body{
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;}
+.hero-content button:hover{
+    color: #cc5d02;
+    background-color: #FFD700;
+    box-shadow: 0 0 40px 20px orange;
+    transition: 0.5s ease;
+}
 
 .nosotros{
     padding: 3.12rem;
@@ -110,20 +121,22 @@ body{
 .featured-products{ /*inicio de los producros - Caja Grande*/
     padding: 3.12rem;
     text-align: center;}
-
 .product-list{ /*inicio de los producros - Caja mediana*/
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+    margin: 20px;}
 .product{
+    background-color: #ffe5a5;
     width: 18.75rem;
-    margin-bottom: 1.87rem;}
+    margin-bottom: 1.87rem;
+    border-radius: 50%;
+    }
 .product:hover{
     background-color: rgb(253, 255, 195);}
-
 .product img{
-    width: 100%;
-    border-radius: .625rem;
+    filter: drop-shadow(0 0 7px black); /*Esto agrega uuna sombra a las imagenes png*/
+    height: 25rem;
     object-fit: cover;
     margin-bottom: .625rem;}
 
@@ -149,7 +162,7 @@ body{
 .equipo{
     padding: 50px;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: #fff4d3;
 }
 .miembro{
     width: 200px;
@@ -165,7 +178,7 @@ body{
 .footer{
     text-align: center;
     padding: 1.25rem;
-    color:antiquewhite;
+    color:#fff4d3;
     background-color: rgb(255, 128, 0);}
 
 .social-media{
@@ -194,7 +207,7 @@ body{
 .newsletter button[type="submit"]{
     background-color: green;
     color: white;
-    padding: 18px 16px;
+    padding: 10px 16px;
     border: none;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -233,6 +246,9 @@ body{
 .te:nth-child(4) {grid-area: te4;}
 .te:nth-child(5) {grid-area: te5;}
 
+#registrate{
+    background-color: #a1480b;
+}
 #manzanilla{
     width: 100%;
     height: 350px;
