@@ -56,11 +56,11 @@ body{
 }
 .logo img{
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
 
 .hero{
-    background-image: url(https://the-slovenia.com/wp-content/uploads/2024/09/easy_bubble_tea_sodium_alginate_calcium_lactate.jpg);
+    background-image: url(https://teacultureoftheworld.com/cdn/shop/articles/taiwan-milk-tea-with-boba-bubble-pearl-on-plastic-2024-02-05-02-27-11-utc_2191x.jpg?v=1714023533);
     background-size: cover;
     background-position: 100% 50rem;
     text-align: cover;
@@ -85,10 +85,10 @@ body{
     font-size: 1.2rem;
     margin-bottom: 20px;}
 
-.hero-content button{
+.hero-content button, .featured-products button{
     padding: .625rem 1.25rem;
     background-color: rgb(255, 128, 0);
-    border: none;
+    border: thick double black;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;}
