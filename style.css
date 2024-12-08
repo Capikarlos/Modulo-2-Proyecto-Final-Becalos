@@ -5,20 +5,19 @@
 
 /*personalización del scrollbar info: https://www.youtube.com/watch?v=lvKK2fs6h4I&ab_channel=KevinPowell*/
 ::-webkit-scrollbar {
-    width: 1em; /* Ancho del scrollbar */}
+    width: 1em; /* Ancho del scrollbar */
+}
 ::-webkit-scrollbar-track {
-    background: rgba(255, 128, 0, 0.2); /* Fondo del track del scrollbar */
+    background: rgba(255, 128, 0, 0.2); /*Fondo del track del scrollbar*/
 }
-
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 128, 0, 0.8); /* Color de la barra */
+    background: rgba(255, 128, 0, 0.8); /*Color de la barra*/
     border: .25em solid rgba(15, 10, 5, 0.2);
-    border-radius: 100vw; /* Bordes redondeados */
-    }
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 128, 0, 1); /* Color más intenso al pasar el mouse */
+    border-radius: 100vw; /*Bordes redondeados del mouse*/
 }
-
+::-webkit-scrollbar-thumb:hover {/*Color más intenso al pasar el mouse*/
+    background: rgba(255, 128, 0, 1); 
+}
 /*es de https://fonts.google.com/specimen/Roboto+Condensed*/
 .roboto-condensed-regular{ 
     font-family: "Roboto Condensed", sans-serif;
@@ -26,31 +25,36 @@
     font-weight: 400;
     font-style: normal;}
 body{
-    font-family: 'Roboto Condensed', sans-serif;}/*Pone todo a Roboto */
+    background-color: #fffaec; /*para decidir el color https://uicolors.app/create*/
+    font-family: 'Roboto Condensed', sans-serif;}/*Pone todo a Roboto*/
 
 .navbar{
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem;
     background-color: rgb(255, 128, 0);
     }
-
 .nav-links{
-    padding-right: 2rem; /*pone la barra mas a la izquierda para que no lo tape el scroll*/
     list-style: none;
     display: flex;}
 .nav-links li{
-    margin-left: 1.5rem;}
+    margin-left: 1.5rem;
+    width: max-content; /*es para que no se baje los elementos de 2 palabras*/
+    padding: 8px 12px; /*para que se vea vien el hover*/
+}
 .nav-links a{ /*estu */
     text-decoration: none;
     color: black;
     font-weight: bold;}
-
+.nav-links li:hover{
+    background-color: #cc5d02;
+}
 .logo{/*Logo modificaciones y marca inventada*/
+    font-size: 25px;
+    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -62,29 +66,23 @@ body{
 .hero{
     background-image: url(https://teacultureoftheworld.com/cdn/shop/articles/taiwan-milk-tea-with-boba-bubble-pearl-on-plastic-2024-02-05-02-27-11-utc_2191x.jpg?v=1714023533);
     background-size: cover;
-    background-position: 100% 50rem;
+    background-position: 50% ;
     text-align: cover;
     color: #FFD700;
-    padding: 20rem 0;
-
-    background-color: #f5f5dc;
-}
-
+    padding: 9rem 0;
+    background-color: #f5f5dc;}
 .hero-content{
     text-shadow: 2px 2px 4px #333;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .hero-content h2{
     font-size: 3rem;
     margin-bottom: 1.25rem;}
-/*nuevo*/
 .hero-content p{
     font-size: 1.2rem;
     margin-bottom: 20px;}
-
 .hero-content button, .featured-products button{
     padding: .625rem 1.25rem;
     background-color: rgb(255, 128, 0);
@@ -99,19 +97,15 @@ body{
     background-color: #f5f5dc;
     color: #333;
     }
-
-    .nosotros h2{
-        font-size: 2.5rem;
-        margin-bottom: 1.25rem;
+.nosotros h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
     }
-
-    .nosotros p{
-        font-size: 1.2rem;
-        line-height: 1.6;
-        max-width: 50rem;
-        margin: 0 auto;
-    }
-
+.nosotros p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 50rem;
+    margin: 0 auto;}
 
 .featured-products{ /*inicio de los producros - Caja Grande*/
     padding: 3.12rem;
@@ -121,14 +115,11 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;}
-
 .product{
     width: 18.75rem;
     margin-bottom: 1.87rem;}
-
 .product:hover{
     background-color: rgb(253, 255, 195);}
-
 
 .product img{
     width: 100%;
