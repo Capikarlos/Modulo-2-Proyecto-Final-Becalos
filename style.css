@@ -163,6 +163,11 @@ header{
         scale: 1;
     }
 }
+.product, .postre{
+    animation: revelar linear both;/*hace que aparescan los productos*/
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
 .featured-products{ /*inicio de los producros - Caja Grande*/
     padding: 1.5rem;
     text-align: center;
@@ -179,9 +184,6 @@ header{
     margin-bottom: 10px;
     border-radius: 100%;
     transition: 0.8s ease-in-out;
-    animation: revelar linear both;/*hace que aparescan los productos*/
-    animation-timeline: view();
-    animation-range: entry 20% cover 35%;
 }
 .product img{
     filter: drop-shadow(0 0 7px black); /*Esto agrega una sombra a las imagenes png*/
@@ -215,6 +217,7 @@ header{
 
 /*inicio de parte tés(que rico) (grid)*/
 .tes{
+    background-color: #ffd16d;
     padding: 25px;
     text-align: center;
 }
@@ -261,7 +264,9 @@ header{
     border-radius: 5%;
     opacity: 0;
 }
-
+.te:hover img{
+    opacity: 0;
+}
 .te:hover #img2{
     opacity: 1;
     transform: scale(1.1);
