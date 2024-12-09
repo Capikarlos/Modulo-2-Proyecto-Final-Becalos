@@ -199,7 +199,7 @@ header{
 
 /*Inicio de productos con cuadrilla (grid)*/
 .postre{
-    padding: 50px;
+    padding: 25px;
     text-align: center;
 }
 .grid-container{
@@ -215,17 +215,26 @@ header{
 
 /*inicio de parte tés(que rico) (grid)*/
 .tes{
-    padding: 50px;
+    padding: 25px;
     text-align: center;
 }
 .grid-te{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(2, 265px);
     gap: 20px;
     grid-template-areas: 
     "te1 te1 te2 te3"
     "te1 te1 te4 te5";
+}
+.grid-infusiones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 265px);
+    gap: 20px;
+    grid-template-areas: 
+    "te2 te3 te1 te1"
+    "te4 te5 te1 te1";
 }
 .te{
     background-color: #ffe5a5;
@@ -238,15 +247,36 @@ header{
     height: 150px;
     object-fit: cover;
     margin-bottom: 5px;
+    transition: 0.5s ease-out;
 }
+.te #img2{
+    position: absolute;
+    border-radius: 5%;
+    translate: -9.38rem 0;
+    opacity: 0;
+}
+.te #img3{
+    position: absolute;
+    translate: -18rem 8.9rem;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+.te:hover #img2{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.te:hover #img3{
+    opacity: 1;
+    transform: scale(2.9);
+}
+
 /*Asignar areas a los sandwiches*/
 .te:nth-child(1) {grid-area: te1;}
 .te:nth-child(2) {grid-area: te2;}
 .te:nth-child(3) {grid-area: te3;}
 .te:nth-child(4) {grid-area: te4;}
 .te:nth-child(5) {grid-area: te5;}
-
-
 
 .equipo-container{
     display: flex;
@@ -312,6 +342,7 @@ header{
     background-color: #ffb232;
 }
 #manzanilla{
-    width: 350px;
-    height: 350px;
+    width: 26.875rem;
+    height: 26.875rem;
+    transition: 0.5s ease-out;
 }
