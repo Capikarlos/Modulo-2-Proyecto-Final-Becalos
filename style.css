@@ -232,6 +232,7 @@ header{
     text-align: center;
 }
 .product-list{ /*inicio de los producros - Caja mediana*/
+    padding-bottom: 2.5rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -259,11 +260,18 @@ header{
 }
 
 /*Inicio de productos con cuadrilla (grid)*/
-.postre{
-    padding: 25px;
+.postres{
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
+.postre{
+    padding: 25px;
+}
 .grid-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -334,7 +342,6 @@ header{
     opacity: 1;
     transform: scale(2.9);
 }
-
 /*Asignar areas a los sandwiches*/
 .te:nth-child(1) {grid-area: te1;}
 .te:nth-child(2) {grid-area: te2;}
@@ -342,6 +349,52 @@ header{
 .te:nth-child(4) {grid-area: te4;}
 .te:nth-child(5) {grid-area: te5;}
 
+
+/*inicio de parte tés(que rico) (grid)*/
+.Acais{
+    background: linear-gradient( #fffaec,#ff980a, #fffaec);
+    padding: 25px;
+    text-align: center;
+}
+.grid-Acai{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 265px);
+    gap: 20px;
+    grid-template-areas: 
+    "Acai2 Acai1 Acai1 Acai4"
+    "Acai3 Acai1 Acai1 Acai5";
+}
+.Acai{
+    background-color: #ffe5a5;
+    border: 7px ridge #ffb232;
+    padding: 7px;
+}
+.Acai img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    transition: 1s ease-out;
+    filter: drop-shadow(0 0 7px black);
+}
+
+.Acai:hover img{
+    rotate: 365deg;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #461d04);
+}
+/*Asignar areas a los sandwiches*/
+.Acai:nth-child(1) {grid-area: Acai1;}
+.Acai:nth-child(2) {grid-area: Acai2;}
+.Acai:nth-child(3) {grid-area: Acai3;}
+.Acai:nth-child(4) {grid-area: Acai4;}
+.Acai:nth-child(5) {grid-area: Acai5;}
+
+
+
+
+/*final del index (inicio de video)*/
 .video iframe, .miembro{
     animation: revelar linear both;/*hace que aparescan los productos*/
     animation-timeline: view();
