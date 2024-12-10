@@ -155,12 +155,17 @@ header{
         translate: 0 0;
     }
 }
-.nosotros{
+.nosotros, .video{
     text-align: center;
-    background-color: #f5f5dc;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff8000, #fae4a3);
     color: #333;
 }
-.nosotros h2{
+.video{
+    padding: 50px;
+}
+.nosotros h2, .video h2{
     font-size: 2.5rem;
     margin-bottom: 1.25rem;
 }
@@ -337,6 +342,11 @@ header{
 .te:nth-child(4) {grid-area: te4;}
 .te:nth-child(5) {grid-area: te5;}
 
+.video iframe, .miembro{
+    animation: revelar linear both;/*hace que aparescan los productos*/
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
 .equipo-container{
     display: flex;
     justify-content: space-around;
