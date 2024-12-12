@@ -1,19 +1,43 @@
 /*Mis medias queries*/
-/*iphone 12*/
-@media screen and (max-width:480px){
-    /*Reglas de CSS ordinarias*/
-    .nosotros img{
-        width: 20rem;
-        height: 14rem;
-        padding: 0 20px 0 20px;
-        object-fit: cover;
+
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .product-list{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .video iframe{
-        width: 70%;
+    .product{
+        width: 45%;
     }
 }
 
+/*pantallas chicas*/
+@media screen and (max-width:1024px){
+    /*Reglas de CSS ordinarias*/
+    .video iframe{
+        width: 75%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+
+    .hero h2{
+        font-size: 7rem;
+    }
+}
 
 /*pantallas chicas*/
 @media screen and (max-width:768px){
@@ -42,14 +66,62 @@
     }
 }
 
-
-@media screen and (min-width:768px) and (max-width:1024px){
-    .product-list{
-        flex-wrap: wrap;
-        justify-content: center;
+/*pantallas chicas como un iphone */
+@media screen and (max-width:480px){
+    .nosotros img{
+        width: 20rem;
+        height: 14rem;
+        padding: 0 20px 0 20px;
+        object-fit: cover;
     }
 
-    .product{
-        width: 45%;
+    .video iframe{
+        width: 75%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+
+    .hero h2{
+        font-size: 7rem;
+    }
+}
+
+/*pantallas chicas*/
+@media screen and (max-width:320px){
+    /*Reglas de CSS ordinarias*/
+    .video iframe{
+        width: 75%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .nav-links li{
+        margin: 10px 0;
+    }
+
+    .hero h2{
+        font-size: 7rem;
     }
 }

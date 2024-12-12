@@ -1,0 +1,182 @@
+/*Inicio del Productos (bebidas con flex)*/
+@keyframes revelar{
+    from{
+        opacity: 0;
+        translate: 0 100px;
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+.product, .postre{
+    animation: revelar linear both;/*hace que aparescan los productos*/
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+.featured-products{ /*inicio de los producros - Caja Grande*/
+    padding: 1.5rem;
+    text-align: center;
+}
+.product-list{ /*inicio de los producros - Caja mediana*/
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.product{/*inicio de los producros - Caja pequeña*/
+    background-color: #ffe5a5;
+    width: 18.75rem;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    transition: 0.8s ease-in-out;
+}
+.product img{
+    filter: drop-shadow(0 0 7px black); /*Esto agrega una sombra a las imagenes png*/
+    height: 25rem;
+    object-fit: cover;
+    margin-bottom: .625rem;
+    transition: 0.5s ease-out;}
+.product:hover{
+    background-color: rgb(253, 255, 195);
+}
+.product:hover img{
+    transform: scale(1.1) rotate(10deg);
+    filter: drop-shadow(0 0 15px #461d04);
+}
+
+/*Inicio de productos con cuadrilla (grid)*/
+.postres{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.postre{
+    padding: 25px;
+}
+.grid-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.postre img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+/*inicio de parte tés(que rico) (grid)*/
+.tes{
+    background-color: #ffd16d;
+    padding: 25px;
+    text-align: center;
+}
+.grid-te{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 265px);
+    gap: 20px;
+    grid-template-areas: 
+    "te1 te1 te2 te3"
+    "te1 te1 te4 te5";
+}
+.grid-infusiones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 265px);
+    gap: 20px;
+    grid-template-areas: 
+    "te2 te3 te1 te1"
+    "te4 te5 te1 te1";
+}
+.te{
+    background-color: #ffe5a5;
+    border: 7px ridge #ffb232;
+    padding: 20px;
+}
+.te img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    transition: 0.5s ease-out;
+}
+.te #img2{
+    position: absolute;
+    border-radius: 5%;
+    translate: -9.38rem 0;
+    opacity: 0;
+}
+.te #img3{
+    position: absolute;
+    translate: -18rem 8.9rem;
+    border-radius: 5%;
+    opacity: 0;
+}
+.te:hover img{
+    opacity: 0;
+}
+.te:hover #img2{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.te:hover #img3{
+    opacity: 1;
+    transform: scale(2.9);
+}
+/*Asignar areas a los sandwiches*/
+.te:nth-child(1) {grid-area: te1;}
+.te:nth-child(2) {grid-area: te2;}
+.te:nth-child(3) {grid-area: te3;}
+.te:nth-child(4) {grid-area: te4;}
+.te:nth-child(5) {grid-area: te5;}
+
+
+/*inicio de parte tés(que rico) (grid)*/
+.Acais{
+    background: linear-gradient( #fffaec,#ff980a, #fffaec);
+    padding: 25px;
+    text-align: center;
+}
+.grid-Acai{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 265px);
+    gap: 20px;
+    grid-template-areas: 
+    "Acai2 Acai1 Acai1 Acai4"
+    "Acai3 Acai1 Acai1 Acai5";
+}
+.Acai{
+    background-color: #ffe5a5;
+    border: 7px ridge #ffb232;
+    padding: 7px;
+}
+.Acai img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    transition: 1s ease-out;
+    filter: drop-shadow(0 0 7px black);
+}
+
+.Acai:hover img{
+    rotate: 365deg;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #461d04);
+}
+/*Asignar areas a los sandwiches*/
+.Acai:nth-child(1) {grid-area: Acai1;}
+.Acai:nth-child(2) {grid-area: Acai2;}
+.Acai:nth-child(3) {grid-area: Acai3;}
+.Acai:nth-child(4) {grid-area: Acai4;}
+.Acai:nth-child(5) {grid-area: Acai5;}
