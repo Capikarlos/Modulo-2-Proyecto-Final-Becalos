@@ -16,7 +16,7 @@
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
 }
-.featured-products{ /*inicio de los producros - Caja Grande*/
+.featured-products, .tes{ /*inicio de los producros - Caja Grande*/
     padding: 1.5rem;
     text-align: center;
 }
@@ -36,10 +36,11 @@
 }
 .product img{
     filter: drop-shadow(0 0 7px black); /*Esto agrega una sombra a las imagenes png*/
-    height: 25rem;
+    height: 25rem; 
     object-fit: cover;
     margin-bottom: .625rem;
-    transition: 0.5s ease-out;}
+    transition: 0.5s ease-out;
+}
 .product:hover{
     background-color: rgb(253, 255, 195);
 }
@@ -55,7 +56,7 @@
     text-align: center;
 }
 .postre{
-    padding: 25px;
+    padding: 1.5rem;
 }
 .grid-container{
     justify-content: center;
@@ -63,7 +64,7 @@
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 1.25rem;
 }
 .postre img{
     width: 100%;
@@ -75,8 +76,6 @@
 /*inicio de parte tés(que rico) (grid)*/
 .tes{
     background-color: #ffd16d;
-    padding: 25px;
-    text-align: center;
 }
 .grid-te{
     display: grid;
@@ -99,7 +98,7 @@
 .te{
     background-color: #ffe5a5;
     border: 7px ridge #ffb232;
-    padding: 20px;
+    padding: 1.25rem;
 }
 .te img{
     border-radius: 50%;
@@ -143,7 +142,7 @@
 /*inicio de parte tés(que rico) (grid)*/
 .Acais{
     background: linear-gradient( #fffaec,#ff980a, #fffaec);
-    padding: 25px;
+    padding: 1.5rem;
     text-align: center;
 }
 .grid-Acai{

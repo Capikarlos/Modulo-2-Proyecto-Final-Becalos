@@ -104,17 +104,48 @@
 
 /*pantallas de mobile S*/
 @media screen and (max-width:320px){
-    .video iframe{
-        width: 75%;
+    .hero-content h2{
+        font-size: 3.5rem;
+        margin-bottom: 1.25rem;
     }
+    .hero-content p{
+        font-size: .8rem;
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+    .logo h1{
+        font-size: 1.5rem;
+    }
+    .nosotros img{
+        width: 13rem; 
+        height: 11rem;
+        padding: 0 20px 0 20px;
+    }
+
+    .product img{
+        height: 10rem !important;
+    }
+
+    .video h2{
+        font-size: 28px;
+    }
+}
+
+/*Es la medida de la pantalla mas pequeña en el mercado*/
+@media screen and (max-width:240px){
+    .hero-content h2{
+        font-size: 3.5rem;
+        margin-bottom: 1.25rem;
+    }
+    .hero-content p{
+        font-size: .8rem;
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    
 
     .logo h1{
         display: none;
-    }
-    .nosotros img{
-        width: 9rem; 
-        height: 10.125rem;
-        padding: 0 20px 0 20px;
-        object-fit: cover;
     }
 }

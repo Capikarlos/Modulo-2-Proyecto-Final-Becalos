@@ -4,41 +4,73 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Esto incluye los iconos-->
-    <title>Burbuja Solar</title> <!-- Mi tutulo de marca-->
+    <title>Formulario de Registro</title> <!-- Mi tutulo de marca-->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5334/5334592.png" type="image/png"> <!--Esto pone el favicon-->
-    <link rel="stylesheet" href="style.css"> <!-- Esto enlaza a mi CSS -->
+    <link rel="stylesheet" href="CSS/style.css"> <!-- Esto enlaza a mi CSS -->
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><!--Tipo de letra/fuente -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <section class="hero" id="Inicio">
-            <div class="hero-content">
-                <h2>BurbuSol</h2>
-                <p>✨"Disfruta de una experiencia única de bobba, llena de sabor, diversión y el toque solar que tu día necesita"✨</p>
-                <button>Ver Menú</button>
-                <script>
-                document.querySelector('.featured-products button').addEventListener('click', function() {
-                window.location.href = 'menu.html';});
+    <!--Mi hero es la imagen y el eslogan-->
+    <section class="hero" id="Inicio">
+        <div class="hero-content">
+            <h2>BurbuSol</h2>
+            <p>✨"Disfruta de una experiencia única de bobba, llena de sabor, diversión y el toque solar que tu día necesita"✨</p>
+            <button>Ver Menú</button>
+            <script>
+                document.querySelector('.hero button').addEventListener('click', function() {window.location.href = 'menu.html';});
             </script>
-            </div>
-        </section>
-    </header>
-    <nav class="navbar"> <!--Navegador (tuve sacarlo del head por el sticky)-->
-        <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/5334/5334592.png" alt="Logo de de Burbusol">
-            <h1>Burbusol</h1>
         </div>
-        <ul class="nav-links">
-            <li> <a href="#" onclick="redirigir('index.html')">INICIO</a></li>
-            <li> <a href="#">NUESTRA HISTORIA</a></li>
-            <li> <a href="#" onclick="redirigir('menu.html')">MENÚ</a></li>
-            <li> <a href="#">CONTACTO</a></li>
-            <li id="registrate"> <a href="#">REGISTRATE</a> </li>
-        </ul>
-    </nav>
+    </section>
+
+    <header>
+        <nav class="navbar">
+            <!--Logo y Marca que yo cree-->
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/5334/5334592.png" alt="Logo de de Burbusol">
+                <h1>Burbusol</h1>
+            </div>
+
+            <!--Para diseño responsivo gracia a https://www.youtube.com/watch?v=EgyweCUtfr0&ab_channel=rocoDev-->
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="65"
+                    height="65"
+                    fill="currentColor"
+                    class="list_icon"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                </svg>
+            </label> 
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa" title="Menu Hamburguesa"> 
+
+            <!--Mi navegacion en el var-->
+            <ul class="nav-links">
+                <li> <a href="#" onclick="redirigir('index.html')">INICIO</a></li>
+                <li> <a href="#Nosotros">NUESTRA HISTORIA</a></li>
+                <li> <a href="#" onclick="redirigir('menu.html')">MENÚ</a></li>
+                <li> <a href="#footer">CONTACTO</a></li>
+                <li id="registrate"> <a href="#" onclick="redirigir('registrate.html')">REGISTRATE</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="formulario">
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
+    </section>
+
 
 
 
