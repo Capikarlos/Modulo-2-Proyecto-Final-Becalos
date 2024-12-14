@@ -1,5 +1,7 @@
 /*Mis medias queries*/
-
+.labe_hamburguesa, .menu_hamburguesa{
+    display: none;
+}
 
 @media screen and (min-width:768px) and (max-width:1024px){
     .product-list{
@@ -12,58 +14,53 @@
     }
 }
 
+/*pantallas de television*/
+@media screen and (max-width:2560px){
+    /*Reglas de CSS ordinarias*/
+}
+
 /*pantallas chicas*/
 @media screen and (max-width:1024px){
-    /*Reglas de CSS ordinarias*/
-    .video iframe{
-        width: 75%;
-    }
-
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links{
-        flex-direction: column;
-        width: 100%;
-        margin: 20px;
-    }
-
     .nav-links li{
         margin: 10px 0;
     }
-
     .hero h2{
-        font-size: 7rem;
+        font-size: 4rem;
+    }
+
+
+    .labe_hamburguesa{
+        display: flex;
+        cursor: pointer;
+    }
+    .menu_hamburguesa:checked + .nav-links{
+        height: 22rem;
+    }
+    .nav-links{
+        overflow: hidden;
+        width: 100%;
+        
+        background-color: rgb(255, 128, 0, 0.97);
+
+        position: absolute;
+        top: 80px;
+        left: 0;
+        height: 0;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        gap: 1rem;
+
+        transition: all .3s;
     }
 }
 
 /*pantallas chicas*/
 @media screen and (max-width:768px){
-    /*Reglas de CSS ordinarias*/
     .video iframe{
         width: 75%;
     }
 
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links{
-        flex-direction: column;
-        width: 100%;
-        margin: 20px;
-    }
-
-    .nav-links li{
-        margin: 10px 0;
-    }
-
-    .hero h2{
-        font-size: 7rem;
-    }
 }
 
 /*pantallas chicas como un iphone */
@@ -79,49 +76,14 @@
         width: 75%;
     }
 
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links{
-        flex-direction: column;
-        width: 100%;
-        margin: 20px;
-    }
-
-    .nav-links li{
-        margin: 10px 0;
-    }
-
-    .hero h2{
-        font-size: 7rem;
-    }
 }
 
 /*pantallas chicas*/
 @media screen and (max-width:320px){
-    /*Reglas de CSS ordinarias*/
     .video iframe{
         width: 75%;
     }
 
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .nav-links{
-        flex-direction: column;
-        width: 100%;
-        margin: 20px;
-    }
-
-    .nav-links li{
-        margin: 10px 0;
-    }
-
-    .hero h2{
-        font-size: 7rem;
-    }
+    
 }
