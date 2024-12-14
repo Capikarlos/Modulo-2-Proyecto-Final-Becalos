@@ -9,24 +9,13 @@
     <link rel="stylesheet" href="CSS/style.css"> <!-- Esto enlaza a mi CSS -->
     <link rel="stylesheet" href="CSS/responsive.css">
     <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/formulario.css"><!--Este hace la magia-->
     <link rel="preconnect" href="https://fonts.googleapis.com"><!--Tipo de letra/fuente -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--Mi hero es la imagen y el eslogan-->
-    <section class="hero" id="Inicio">
-        <div class="hero-content">
-            <h2>BurbuSol</h2>
-            <p>✨"Disfruta de una experiencia única de bobba, llena de sabor, diversión y el toque solar que tu día necesita"✨</p>
-            <button>Ver Menú</button>
-            <script>
-                document.querySelector('.hero button').addEventListener('click', function() {window.location.href = 'menu.html';});
-            </script>
-        </div>
-    </section>
-
     <header>
         <nav class="navbar">
             <!--Logo y Marca que yo cree-->
@@ -64,11 +53,18 @@
         </nav>
     </header>
 
+    <!--Inicio del formulario y agregue unas cosas gracias a https://www.youtube.com/watch?v=OvhVLFQmgOY&ab_channel=RogerNatividad-->
     <section class="formulario">
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
+        <h4>FORMULARIO REGISTRATE<br> A BURBUSOL</h4>
+        <input class="control" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+        <input class="control" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+        <input class="control" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <input class="control" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
+
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <input class="boton" type="submit" value="Registrar">
+        <p><a href="#">¿Ya tengo Cuenta?</a></p>
+
     </section>
 
 
