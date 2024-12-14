@@ -97,8 +97,8 @@ header{
 .hero{
     background-image: url(https://teacultureoftheworld.com/cdn/shop/articles/taiwan-milk-tea-with-boba-bubble-pearl-on-plastic-2024-02-05-02-27-11-utc_2191x.jpg?v=1714023533);
     background-size: cover;
-    background-position: 50% ;
-    text-align: cover;
+    background-position: 50%;
+    text-align: center; /*alinea mi texto*/
     color: #FFD700;
     padding: 9rem 0;
     background-color: #f5f5dc;
@@ -109,12 +109,13 @@ header{
     flex-direction: column;
     align-items: center;
 }
-.hero-content h2{
-    font-size: 3rem;
+.hero-content h2{ /*El texto del hero*/
+    font-size: 10rem;
     margin-bottom: 1.25rem;
 }
 .hero-content p{
     font-size: 1.5rem;
+    margin: 0 20px;
     margin-bottom: 20px;
 }
 .hero-content button, .featured-products button{
