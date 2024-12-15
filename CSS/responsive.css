@@ -1,13 +1,7 @@
 /*Mis medias queries*/
-/*Paina optimisada de 1440px - 320px*/
+/*Pataña optimisada de 1440px - 320px*/
 .labe_hamburguesa, .menu_hamburguesa{
     display: none;
-}
-
-/*elevisiones*/
-@media screen and (min-width:1440px){
-    /*Reglas de CSS ordinarias*/
-
 }
 
 /*pantallas como laptops*/
@@ -47,6 +41,9 @@
         height: 14rem;
         padding: 0 20px 0 20px;
         object-fit: cover;
+    }
+    .texto p{/*Este es el texto de nosotros*/
+        font-size: 16px !important;
     }
 
     .video iframe{
@@ -107,7 +104,6 @@
         margin-bottom: 20px;
     }
 
-
     .nosotros img{
         width: 20rem;
         height: 14rem;
@@ -154,10 +150,11 @@
         padding: 0 20px 0 20px;
     }
 
-
+    /*Reducir el video*/
     .video h2{
         font-size: 28px;
     }
+    /*Lo del producto pa que quepa*/
     .product img{
         height: 8rem !important;
     }
