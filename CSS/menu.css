@@ -28,6 +28,7 @@
     margin: 10px;
 }
 .product{/*inicio de los producros - Caja pequeña*/
+    gap: 20px;
     background-color: #ffe5a5;
     width: 18.75rem;
     margin-bottom: 10px;
@@ -50,6 +51,7 @@
 }
 
 /*Inicio de productos con cuadrilla (grid)*/
+/*INICIO de crepas y pasteles*/
 .postres{
     justify-content: center;
     align-items: center;
@@ -94,9 +96,8 @@
     gap: 20px;
     grid-template-areas: 
     "te2 te3 te1 te1"
-    "te4 te5 te1 te1";
+    "te4 te5 te1 te1";/*Diseño del cuadros*/
 }
-/* Para pantallas pequeñas */
 
 .te{
     background-color: #ffe5a5;
@@ -117,13 +118,13 @@
     translate: -9.38rem 0;
     opacity: 0;
 }
-.te #img3{
+.te #img3{/*Imagen gran y id para identificarlo mejor y editar*/
     position: absolute;
     translate: -18rem 8.9rem;
     border-radius: 5%;
     opacity: 0;
 }
-.te:hover img{
+.te:hover img{/*Los 3 hover hacen que aparesca otra imagen*/
     opacity: 0;
 }
 .te:hover #img2{
@@ -169,7 +170,7 @@
     transition: 1s ease-out;
     filter: drop-shadow(0 0 7px black);
 }
-.Acai:hover img{
+.Acai:hover img{/*Rota los bowls*/
     rotate: 365deg;
     transform: scale(1.1);
     filter: drop-shadow(0 0 15px #461d04);
@@ -181,7 +182,7 @@
 .Acai:nth-child(4) {grid-area: Acai4;}
 .Acai:nth-child(5) {grid-area: Acai5;}
 
-#manzanilla{
+#manzanilla{/*Id para las imagenes grandes si lo pongo si fuera una clase se descuadra todo*/
     width: 26.875rem;
     height: 26.875rem;
     transition: 0.5s ease-out;
@@ -278,7 +279,7 @@
     .grid-te,
     .grid-infusiones,
     .grid-Acai {
-        gap: 10px; /* Reducir el espacio entre elementos */
+        gap: 10px; /*Reducir el espacio entre elementos */
     }
 }
 
@@ -287,8 +288,8 @@
     .grid-te,
     .grid-infusiones,
     .grid-Acai {
-        grid-template-columns: repeat(1, 170px); /* Dos columnas de 150px cada una */
-        grid-template-rows: repeat(auto-fit, 250px); /* Altura fija de 150px */
+        grid-template-columns: repeat(1, 170px); /* Dos columnas de 170px cada una */
+        grid-template-rows: repeat(auto-fit, 250px); /* Altura fija de 250px */
         justify-content: center; /* Centrar los elementos si el espacio es mayor */
         gap: 10px; /* Espaciado reducido entre los cuadrados */
     }

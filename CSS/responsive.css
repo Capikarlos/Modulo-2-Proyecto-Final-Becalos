@@ -50,7 +50,7 @@
     }
 
     .video iframe{
-        width: 75%;
+        width: 95%;
     }
 
     /*Aqui empieza lo del menu desplegable*/
@@ -78,6 +78,17 @@
 
     .product img{
         height: 15rem !important;
+    }
+
+    /*Lo ded forulario*/
+    .formulario{
+        width: 350px !important;
+    }
+    
+    /*Reducir el tamño de la img postre*/
+    .postre img{
+        width: 80% !important;
+        height: 250px !important;
     }
 }
 
@@ -108,7 +119,19 @@
         width: 75%;
     }
 
-    
+    /*Lo ded forulario*/
+    .formulario{
+        width: 200px !important;
+    }
+    .formulario p{
+        font-size: 10px !important;
+    }
+
+    /*Reducir el tamño de la img postre*/
+    .postre img{
+        width: 70% !important;
+        height: 100px !important;
+    }
 }
 
 /*pantallas de mobile S*/
