@@ -1,8 +1,8 @@
 /*Mis medias queries*/
+/*Paina optimisada de 1440px - 320px*/
 .labe_hamburguesa, .menu_hamburguesa{
     display: none;
 }
-
 
 /*elevisiones*/
 @media screen and (min-width:1440px){
@@ -73,10 +73,15 @@
         flex-direction: column;
         justify-content: top;
         align-items: center;
-
         transition: all .3s;/*para la animacion*/
     }
+
+    .product img{
+        height: 15rem !important;
+    }
 }
+
+
 
 /*pantallas de mobile m (como un iphone 12) */
 @media screen and (max-width:480px){
@@ -103,6 +108,7 @@
         width: 75%;
     }
 
+    
 }
 
 /*pantallas de mobile S*/
@@ -125,12 +131,12 @@
         padding: 0 20px 0 20px;
     }
 
-    .product img{
-        height: 10rem !important;
-    }
 
     .video h2{
         font-size: 28px;
+    }
+    .product img{
+        height: 8rem !important;
     }
 }
 
@@ -145,8 +151,6 @@
         margin: 0 20px;
         margin-bottom: 20px;
     }
-
-    
 
     .logo h1{
         display: none;
