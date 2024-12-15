@@ -86,6 +86,7 @@
     "te1 te1 te2 te3"
     "te1 te1 te4 te5";
 }
+
 .grid-infusiones{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -95,6 +96,8 @@
     "te2 te3 te1 te1"
     "te4 te5 te1 te1";
 }
+/* Para pantallas pequeñas */
+
 .te{
     background-color: #ffe5a5;
     border: 7px ridge #ffb232;
@@ -138,7 +141,6 @@
 .te:nth-child(4) {grid-area: te4;}
 .te:nth-child(5) {grid-area: te5;}
 
-
 /*inicio de parte tés(que rico) (grid)*/
 .Acais{
     background: linear-gradient( #fffaec,#ff980a, #fffaec);
@@ -179,3 +181,32 @@
 .Acai:nth-child(3) {grid-area: Acai3;}
 .Acai:nth-child(4) {grid-area: Acai4;}
 .Acai:nth-child(5) {grid-area: Acai5;}
+
+/*Nota no acepta los cambios si lo pongo en responsive.css*/
+@media (max-width: 1024px) {
+    .grid-te {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: auto; /* Altura dinámica según contenido */
+        grid-template-areas:
+        "te2 te3"
+        "te4 te5"
+        "te1 te1"; /* te1 ocupa toda la fila en la parte inferior */
+    }
+    .grid-infusiones{
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: auto; /* Altura dinámica según contenido */
+        grid-template-areas:
+        "te1 te1"
+        "te2 te3"
+        "te4 te5"; /* te1 ocupa toda la fila en la parte inferior */
+    }
+
+    .grid-Acai{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "Acai2 Acai3"
+        "Acai1 Acai1"
+        "Acai4 Acai5";
+    }
+}
